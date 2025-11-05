@@ -11,19 +11,39 @@
       "type": "input",
       "default": "https://api.deepseek.com/chat/completions",
       "placeholder": "例如: https://api.your-proxy.com/v1"
-    }，
+    },
     {
       "key": "model",
       "display": "模型名称",
       "type": "input",
       "default": "deepseek-chat"
-    }，
+    },
     {
-      "key": "apiKey",
-      "display": "API密钥 (多个请用,隔开)",
+      "key": "apiKey1",
+      "display": "API密钥 1",
+      "type": "input"
+    },
+    {
+      "key": "apiKey2",
+      "display": "API密钥 2 (可选)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey3",
+      "display": "API密钥 3 (可选)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey4",
+      "display": "API密钥 4 (可选)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey5",
+      "display": "API密钥 5 (可选)",
       "type": "input"
     }
-  ]，
+  ],
   "language": {
     "auto": "auto",
     "zh_cn": "zh",
