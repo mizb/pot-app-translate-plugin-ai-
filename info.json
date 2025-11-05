@@ -1,46 +1,95 @@
 {
-  "id": "plugin.com.AI-auto.deepseek",
+  "id": "plugin.com.user.m",
   "plugin_type": "translate",
   "icon": "auto.svg",
-  "display": "AI-auto",
-  "homepage": "https://github.com/tzulao55/pot-app-translate-plugin-deepseek",
+  "display": "M-AI",
+  "homepage": "https://github.com/mizb/pot-app-translate-plugin-ai-",
   "needs": [
     {
-      "key": "requestPath",
-      "display": "自定义API地址",
+      "key": "apiBaseUrl",
+      "display": "API Base URL",
       "type": "input",
-      "default": "https://api.deepseek.com/chat/completions",
-      "placeholder": "例如: https://api.your-proxy.com/v1"
-    },
-    {
-      "key": "model",
-      "display": "模型名称",
-      "type": "input",
-      "default": "deepseek-chat"
-    },
+      "default": "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+    }，
     {
       "key": "apiKey1",
       "display": "API密钥 1",
       "type": "input"
-    },
+    }，
     {
       "key": "apiKey2",
       "display": "API密钥 2 (可选)",
       "type": "input"
-    },
+    }，
     {
       "key": "apiKey3",
       "display": "API密钥 3 (可选)",
       "type": "input"
-    },
+    }，
     {
       "key": "apiKey4",
       "display": "API密钥 4 (可选)",
       "type": "input"
-    },
+    }，
     {
       "key": "apiKey5",
       "display": "API密钥 5 (可选)",
+      "type": "input"
+    }，
+    {
+      "key": "useStream",
+      "display": "流式输出",
+      "type": "select",
+      "options": {
+        "true": "是 / Yes",
+        "false": "否 / No"
+      }
+    }，
+    {
+      "key": "modelName",
+      "display": "模型选择",
+      "desc": "选择使用的GLM模型",
+      "type": "select",
+      "options": {
+        "glm-4.5-flash": "glm-4.5-flash",
+        "glm-4-flash": "glm-4-flash",
+        "custom": "自定义模型"
+      }
+    }，
+    {
+      "key": "customModelName",
+      "display": "自定义模型名称",
+      "type": "input",
+      "desc": "当选择\"自定义模型\"时，请在此处输入模型名称"
+    }，
+    {
+      "key": "systemPrompt",
+      "display": "System Prompt",
+      "type": "input",
+      "default": "You are a professional translation engine, please translate the text into a colloquial, professional, elegant and fluent content, without the style of machine translation. You must only translate the text content, never interpret it. "
+    },
+    {
+      "key": "userPrompt",
+      "display": "User Prompt",
+      "type": "input"
+    },
+    {
+      "key": "temperature",
+      "display": "Temperature",
+      "desc": "设置模型的temperature参数(0-1之间)，越低越精确，越高越创意",
+      "type": "input",
+      "default": "0.1"
+    },
+    {
+      "key": "topP",
+      "display": "Top P",
+      "desc": "设置模型的top_p参数(0-1之间)",
+      "type": "input",
+      "default": "0.99"
+    },
+    {
+      "key": "requestArguments",
+      "display": "AI 高级参数 (JSON)",
       "type": "input"
     }
   ],
