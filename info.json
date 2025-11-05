@@ -1,26 +1,29 @@
 {
-  "id": "plugin.com.TzuLao.deepseek",
+  "id": "plugin.com.AI-auto.deepseek",
   "plugin_type": "translate",
-  "icon": "deepseek.svg",
-  "display": "deepseek",
+  "icon": "auto.svg",
+  "display": "AI-auto",
   "homepage": "https://github.com/tzulao55/pot-app-translate-plugin-deepseek",
   "needs": [
     {
+      "key": "requestPath",
+      "display": "自定义API地址",
+      "type": "input",
+      "default": "https://api.deepseek.com/chat/completions",
+      "placeholder": "例如: https://api.your-proxy.com/v1"
+    }，
+    {
       "key": "model",
-      "display": "模型选择",
-      "type": "select",
-      "options": {
-        "deepseek-chat": "deepseek-chat",
-        "deepseek-reasoner": "deepseek-reasoner"
-      },
+      "display": "模型名称",
+      "type": "input",
       "default": "deepseek-chat"
-    },
+    }，
     {
       "key": "apiKey",
-      "display": "API密钥",
+      "display": "API密钥 (多个请用,隔开)",
       "type": "input"
     }
-  ],
+  ]，
   "language": {
     "auto": "auto",
     "zh_cn": "zh",
